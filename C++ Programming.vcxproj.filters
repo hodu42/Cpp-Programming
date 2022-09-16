@@ -54,5 +54,8 @@
     <ClCompile Include="4.binary.cpp">
       <Filter>소스 파일\과제3 함수와 배열</Filter>
     </ClCompile>
+    <ClCompile Include="5.merge.cpp">
+      <Filter>소스 파일\과제3 함수와 배열</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
