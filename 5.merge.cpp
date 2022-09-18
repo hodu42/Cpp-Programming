@@ -6,14 +6,14 @@ bool getArray(int arr1[], int size1, int arr2[], int size2);
 bool isNondescending(int arr[], int size);
 
 int main() {
-	const int arr1Size = 5, arr2Size = 5, mergedSize = 10;
-	int arr1[arr1Size] = {}, arr2[arr2Size] = {}, merged[mergedSize] = {};
+	const int ARR1_SIZE = 5, ARR2_SIZE = 5, MERGED_SIZE = 10;
+	int arr1[ARR1_SIZE] = {}, arr2[ARR2_SIZE] = {}, merged[MERGED_SIZE] = {};
 
-	while (getArray(arr1, arr1Size, arr2, arr2Size)) {
+	while (getArray(arr1, ARR1_SIZE, arr2, ARR2_SIZE)) {
 
 		int index1 = 0, index2 = 0, resultIndex = 0;
 
-		while (index1 < arr1Size && index2 < arr2Size) {
+		while (index1 < ARR1_SIZE && index2 < ARR2_SIZE) {
 			if (arr1[index1] <= arr2[index2]) {
 				merged[resultIndex] = arr1[index1];
 				index1++, resultIndex++;
@@ -24,20 +24,20 @@ int main() {
 			}
 		}
 
-		if (index1 == arr1Size) {
-			for (int i = index2; i < arr2Size; i++, resultIndex++) {
+		if (index1 == ARR1_SIZE) {
+			for (int i = index2; i < ARR2_SIZE; i++, resultIndex++) {
 				merged[resultIndex] = arr2[i];
 			}
 		}
-		else if (index2 == arr2Size) {
-			for (int i = index1; i < arr1Size; i++, resultIndex++) {
+		else if (index2 == ARR2_SIZE) {
+			for (int i = index1; i < ARR1_SIZE; i++, resultIndex++) {
 				merged[resultIndex] = arr1[i];
 			}
 		}
 
 		cout << "Merged 10 non-descending integers :";
 
-		for (int i = 0; i < mergedSize; i++) {
+		for (int i = 0; i < MERGED_SIZE; i++) {
 			cout << " " << merged[i];
 		}
 
