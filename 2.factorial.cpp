@@ -11,7 +11,6 @@ int main() {
 			cout << "Result using iteration = " << repeat(input) << endl;
 			cout << "Result using recursive = " << recur(input) << endl;
 	}
-
 	cout << "== END ==";
 	return 0;
 }

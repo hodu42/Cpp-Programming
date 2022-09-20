@@ -2,14 +2,14 @@
 
 using namespace std;
 
-bool getArray(int arr1[], int size1, int arr2[], int size2);
+bool getArray(int arr[], int size);
 bool isNondescending(int arr[], int size);
 
 int main() {
 	const int ARR1_SIZE = 5, ARR2_SIZE = 5, MERGED_SIZE = 10;
 	int arr1[ARR1_SIZE] = {}, arr2[ARR2_SIZE] = {}, merged[MERGED_SIZE] = {};
 
-	while (getArray(arr1, ARR1_SIZE, arr2, ARR2_SIZE)) {
+	while (getArray(arr1, ARR1_SIZE) && getArray(arr2, ARR2_SIZE)) {
 
 		int index1 = 0, index2 = 0, resultIndex = 0;
 
@@ -49,21 +49,12 @@ int main() {
 	return 0;
 }
 
-bool getArray(int arr1[], int size1, int arr2[], int size2) {
-		cout << "Enter 5 non-descending integers : ";
-		cin >> arr1[0] >> arr1[1] >> arr1[2] >> arr1[3] >> arr1[4];
-
-		if (!isNondescending(arr1, size1)) {	
-			return 0;
-		}
-		cout << "Enter 5 non-descending integers : ";
-		cin >> arr2[0] >> arr2[1] >> arr2[2] >> arr2[3] >> arr2[4];
-
-		if (!isNondescending(arr2, size2)) {
-			return 0;
-		}
-
-		return 1;
+bool getArray(int arr[], int size) {
+	cout << "Enter 5 non-descending integers : ";
+	for (int i = 0; i < size; i++) {
+		cin >> arr[i];
+	}
+	return isNondescending(arr, size);
 }
 
 bool isNondescending(int arr[], int size) {

@@ -3,10 +3,10 @@
 using namespace std;
 const int MATSIZE = 3;
 
-void transpose(int arr[][MATSIZE], int transposed[][MATSIZE]);
-void sum(int arr1[][MATSIZE], int arr2[][MATSIZE], int sum[][MATSIZE]);
-void multiply(int arr1[][MATSIZE], int arr2[][MATSIZE], int multiply[][MATSIZE]);
-void printMat(int transpose[][MATSIZE], int transpose2[][MATSIZE], int sum[][MATSIZE], int multiply[][MATSIZE]);
+void transpose(const int arr[][MATSIZE], int transposed[][MATSIZE]);
+void sum(const int arr1[][MATSIZE], const int arr2[][MATSIZE], int sum[][MATSIZE]);
+void multiply(const int arr1[][MATSIZE], const int arr2[][MATSIZE], int multiply[][MATSIZE]);
+void printMat(const int matrix[][MATSIZE]);
 
 int main() {
 	
@@ -33,12 +33,21 @@ int main() {
 	transpose(mat2, transposeMat2);
 	sum(mat1, mat2, sumMat);
 	multiply(mat1, mat2, multiplyMat);
-	printMat(transposeMat1, transposeMat2, sumMat, multiplyMat);
+	
+
+	cout << "MATRIX 1 Transpose" << endl;
+	printMat(transposeMat1);
+	cout << "MATRIX 2 Transpose" << endl;
+	printMat(transposeMat2);
+	cout << "Sum" << endl;
+	printMat(sumMat);
+	cout << "Multiplication" << endl;
+	printMat(multiplyMat);
 
 	return 0;
 }
 
-void transpose(int arr[][MATSIZE], int transposed[][MATSIZE]) {
+void transpose(const int arr[][MATSIZE], int transposed[][MATSIZE]) {
 	for (int y = 0; y < MATSIZE; y++) {
 		for (int x = 0; x < MATSIZE; x++) {
 			transposed[y][x] = arr[x][y];
@@ -46,7 +55,7 @@ void transpose(int arr[][MATSIZE], int transposed[][MATSIZE]) {
 	}
 }
 
-void sum(int arr1[][MATSIZE], int arr2[][MATSIZE], int sum[][MATSIZE]) {
+void sum(const int arr1[][MATSIZE], const int arr2[][MATSIZE], int sum[][MATSIZE]) {
 	for (int y = 0; y < MATSIZE; y++) {
 		for (int x = 0; x < MATSIZE; x++) {
 			sum[y][x] = arr1[y][x] + arr2[y][x];
@@ -54,7 +63,7 @@ void sum(int arr1[][MATSIZE], int arr2[][MATSIZE], int sum[][MATSIZE]) {
 	}
 }
 
-void multiply(int arr1[][MATSIZE], int arr2[][MATSIZE], int multiply[][MATSIZE]) {
+void multiply(const int arr1[][MATSIZE], const int arr2[][MATSIZE], int multiply[][MATSIZE]) {
 	for (int i = 0; i < MATSIZE; i++) {
 		for (int j = 0; j < MATSIZE; j++) {
 			int sum = 0;
@@ -67,42 +76,11 @@ void multiply(int arr1[][MATSIZE], int arr2[][MATSIZE], int multiply[][MATSIZE])
 	
 }
 
-void printMat(int transpose1[][MATSIZE], int transpose2[][MATSIZE], int sum[][MATSIZE], int multiply[][MATSIZE]) {
-	cout << "MATRIX 1 Transpose" << endl;
+void printMat(const int matrix[][MATSIZE]) {
 	for (int y = 0; y < MATSIZE; y++) {
 		cout << "|";
 		for (int x = 0; x < MATSIZE; x++) {
-			printf("%2d", transpose1[y][x]);
-		}
-		cout << "|" << endl;
-	}
-	cout << endl;
-
-	cout << "MATRIX 2 Transpose" << endl;
-	for (int y = 0; y < MATSIZE; y++) {
-		cout << "|";
-		for (int x = 0; x < MATSIZE; x++) {
-			printf("%2d", transpose2[y][x]);
-		}
-		cout << "|" << endl;
-	}
-	cout << endl;
-
-	cout << "Sum" << endl;
-	for (int y = 0; y < MATSIZE; y++) {
-		cout << "|";
-		for (int x = 0; x < MATSIZE; x++) {
-			printf("%2d", sum[y][x]);
-		}
-		cout << "|" << endl;
-	}
-	cout << endl;
-
-	cout << "Multiplication" << endl;
-	for (int y = 0; y < MATSIZE; y++) {
-		cout << "|";
-		for (int x = 0; x < MATSIZE; x++) {
-			printf("%2d", multiply[y][x]);
+			printf("%2d", matrix[y][x]);
 		}
 		cout << "|" << endl;
 	}
