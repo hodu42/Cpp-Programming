@@ -60,5 +60,8 @@
     <ClCompile Include="6.matrix.cpp">
       <Filter>소스 파일\과제3 함수와 배열</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>소스 파일\과제3 함수와 배열</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

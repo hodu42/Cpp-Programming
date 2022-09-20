@@ -12,7 +12,7 @@ int main() {
 			cout << "Backward :";
 			showDigit(input);
 			cout << endl;
-			cout << "Forward :";
+			cout << "Forward  :";
 			showReverseDigit(input);
 			cout << endl;
 		}
