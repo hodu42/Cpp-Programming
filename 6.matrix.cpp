@@ -24,10 +24,10 @@ int main() {
 		{-1, 1, 0}
 	};
 	
-	int transposeMat1[][MATSIZE] = { {} };
-	int transposeMat2[][MATSIZE] = { {} };
-	int sumMat[][MATSIZE] = { {} };
-	int multiplyMat[][MATSIZE] = { {} };
+	int transposeMat1[MATSIZE][MATSIZE] = { 0 };
+	int transposeMat2[MATSIZE][MATSIZE] = { 0 };
+	int sumMat[MATSIZE][MATSIZE] = { 0 };
+	int multiplyMat[MATSIZE][MATSIZE] = { 0 };
 
 	transpose(mat1, transposeMat1);
 	transpose(mat2, transposeMat2);
@@ -55,16 +55,13 @@ void sum(int arr1[][MATSIZE], int arr2[][MATSIZE], int sum[][MATSIZE]) {
 }
 
 void multiply(int arr1[][MATSIZE], int arr2[][MATSIZE], int multiply[][MATSIZE]) {
-
-	for (int y1 = 0; y1 < MATSIZE; y1++) {
-		for (int x1 = 0; x1 < MATSIZE; x1++) {
-			arr1[y1][x1];
-		}
-	}
-
-	for (int x2 = 0; x2 < MATSIZE; x2++) { //행렬2 곱해지는순서
-		for (int y2 = 0; y2 < MATSIZE; y2++) {
-			arr2[y2][x2];
+	for (int i = 0; i < MATSIZE; i++) {
+		for (int j = 0; j < MATSIZE; j++) {
+			int sum = 0;
+			for (int k = 0; k < MATSIZE; k++) {
+				sum += arr1[i][k] * arr2[k][j];
+			}
+			multiply[i][j] = sum;
 		}
 	}
 	
