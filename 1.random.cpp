@@ -3,32 +3,26 @@
 using namespace std;
 
 int main() {
-    int input, sum;
-    cout << "ÀÔ·Â : ";
-    cin >> input;
+	srand(time(0));
+	int input = -1;
+	int val = rand() % 100 + 1;
+	int cnt = 0;
+	cout << "I have specified one natural number less than or equal to 100." << endl;
 
-    for (int i = 1; i <= input; i++) {
-        sum = 0;
-        for (int j = 1; j <= i / 2; j++) {
-            if (i % j == 0) {
-                sum += j;
-            }
-        }
-        if (sum == i) {
-            cout << i << "(";
-            for (int k = 1; k <= i / 2; k++) {
-                if (i % k == 0) {
-                    if (k == 1) {
-                        cout << k;
-                    }
-                    else {
-                        cout << "+" << k;
-                    }
+	while (input != val) {
 
-                }
-            }
-            cout << ")\n";
-        }
-    }
-    return 0;
+		cout << "Guess the number and enter it : ";
+		cin >> input;
+		cnt++;
+		if (input > val) {
+			cout << "The number I specified is a number less than " << input << "." << endl;
+		}
+		else if (input < val) {
+			cout << "The number I specified is a number greater than " << input << "." << endl;
+		}
+		cout << endl;
+	}
+
+	cout << "Got it!!! You've succeeded in the " << cnt << "th times!" << endl;
+	return 0;
 }
