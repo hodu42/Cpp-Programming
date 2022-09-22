@@ -10,6 +10,7 @@ public:
 	Matrix add(Matrix) const;
 	Matrix multi(Matrix) const;
 private:
-	int mat[3][3];
+	static const int matSize = 3;
+	int mat[matSize][matSize];
 	void initialization();
 };
