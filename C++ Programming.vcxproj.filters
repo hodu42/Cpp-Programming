@@ -72,9 +72,18 @@
     <ClCompile Include="Fraction.cpp">
       <Filter>소스 파일\과제4 클래스</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>소스 파일\과제4 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixApp.cpp">
+      <Filter>소스 파일\과제4 클래스</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fraction.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
