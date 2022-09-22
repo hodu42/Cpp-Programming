@@ -2,16 +2,13 @@
 
 class Fraction {
 public:
-	Fraction();
-	Fraction(int, int);
-	int getDenom();
-	int getNumer();
+	Fraction(int = 1, int = 1);
 	void setDenom(int);
 	void setNumer(int);
 	Fraction add(Fraction) const;
 	void print();
 private:
 	int denom, numer;
-	void abb(int, int);
-	void absolute(int, int);
+	void gcd(int, int);
+	void denomCheck(int);
 };
