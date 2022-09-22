@@ -9,4 +9,5 @@ int main()
 	f3 = f1.add(f2); // f1 = 2/3
 	f3.print();
 	return 0;
-}
+}
+

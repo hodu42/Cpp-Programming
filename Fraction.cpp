@@ -7,66 +7,61 @@ using namespace std;
 Fraction::Fraction() {
 	denom = numer = 1;
 };
-Fraction::Fraction(int first, int second) {
-	numer = second;
-	if (first == 0) {
+Fraction::Fraction(int bunza, int bunmo) {
+	numer = bunza;
+	if (bunmo == 0) {
 		cout << "input denom is 0, changed to 1";
 		denom = 1;
 	}
 	else {
-		denom = first;
+		denom = bunmo;
 	}
-	absolute(denom, numer);
-	abb(denom, numer);
+	absolute(numer, denom);
+	abb(numer, denom);
 };
-void Fraction::setDenom(int first) {
-	if (first == 0) {
+void Fraction::setDenom(int bunmo) {
+	if (bunmo == 0) {
 		cout << "input denom is 0, changed to 1";
-		denom = 1;
+		Fraction(numer, 1);
 	}
 	else {
-		denom = first;
+		Fraction(numer, bunmo);
 	}
-	absolute(denom, numer);
-	abb(denom, numer);
 };
-void Fraction::setNumer(int num) {
-	numer = num;
-	absolute(denom, numer);
-	abb(denom, numer);
+void Fraction::setNumer(int bunza) {
+	Fraction(bunza, denom);
 };
 Fraction Fraction::add(Fraction a) const {
-	int bunmo = denom * a.denom;
 	int bunza = (numer * a.denom) + (a.numer * denom);
-	return Fraction(bunmo, bunza);
+	int bunmo = denom * a.denom;
+	return Fraction(bunza, bunmo);
 };
 void Fraction::print() {
-	cout << " " << numer << endl;
 	if (denom < 0) {
-		cout << "-" << endl;
+		cout << "- ";
 	}
 	else {
-		cout << "+ -------" << endl;
+		cout << "+ ";
 	}
-	cout << " " << abs(denom) << endl;
+	cout << numer << "/" << denom << endl;
 };
-void Fraction::abb(int a, int b) {
-	for (int i = 2; i <= a; i++) {
-		if (a % i == 0) {
-			if (b % i == 0) {
-				denom = a / i;
-				numer = b / i;
+void Fraction::abb(int bunza, int bunmo) {
+	for (int i = 2; i <= bunza; i++) {
+		if (bunza % i == 0) {
+			if (bunmo % i == 0) {
+				denom = bunmo / i;
+				numer = bunza / i;
 			}
 		}
 	}
 }
-void Fraction::absolute(int first, int second) {
-	if (first * second < 0) {
-		denom = -1 * abs(first);
-		numer = abs(second);
+void Fraction::absolute(int bunza, int bunmo) {
+	if (bunza * bunmo < 0) {
+		denom = -1 * abs(bunmo);
+		numer = abs(bunza);
 	}
 	else {
-		denom = first;
-		numer = second;
+		denom = bunmo;
+		numer = bunza;
 	}
 }
