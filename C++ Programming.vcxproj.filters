@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\과제3 함수와 배열">
       <UniqueIdentifier>{842d6fcd-a311-4dc4-a604-29a3b3603ce9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\과제4 클래스">
+      <UniqueIdentifier>{5ca95dc7-04fd-473c-a69a-039e4bb88cb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HelloWorld.cpp">
@@ -63,5 +66,16 @@
     <ClCompile Include="test.cpp">
       <Filter>소스 파일\과제3 함수와 배열</Filter>
     </ClCompile>
+    <ClCompile Include="FractionAPP.cpp">
+      <Filter>소스 파일\과제4 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Fraction.cpp">
+      <Filter>소스 파일\과제4 클래스</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fraction.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
