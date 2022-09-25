@@ -10,7 +10,8 @@ public:
 	Matrix add(Matrix) const;
 	Matrix multi(Matrix) const;
 private:
-	static const int matSize = 3;
-	int mat[matSize][matSize];
+	static const int MATSIZE = 3;
+	int mat[MATSIZE][MATSIZE];
 	void initialization();
+	void getMaximumDigitCol(int [MATSIZE]) const;
 };

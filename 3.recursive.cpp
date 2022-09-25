@@ -1,7 +1,8 @@
 #include <iostream>
 
 using namespace std;
-void showDigit(int n), showReverseDigit(int n);
+void showDigit(int n);
+void showReverseDigit(int n);
 int getInput(int& input);
 
 int main() {
