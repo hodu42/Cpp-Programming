@@ -7,15 +7,12 @@ int getInput(int& input);
 int main() {
 	int input = 0;
 	while (getInput(input)) {
-		
-		if (input != 0) {
-			cout << "Backward :";
-			showDigit(input);
-			cout << endl;
-			cout << "Forward  :";
-			showReverseDigit(input);
-			cout << endl;
-		}
+		cout << "Backward :";
+		showDigit(input);
+		cout << endl;
+		cout << "Forward  :";
+		showReverseDigit(input);
+		cout << endl;
 	}
 	cout << "== END ==";
 }
