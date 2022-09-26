@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()		//main 제출? 잘 모르겠음 물어보자
+int main()		//main 제출? 잘 모르겠음 물어보자, -출력 처리필요
 {
 	Matrix m1, m2;
 	m1.read(); m1.print();
