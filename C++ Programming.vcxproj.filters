@@ -25,6 +25,9 @@
     <Filter Include="소스 파일\과제4 클래스">
       <UniqueIdentifier>{5ca95dc7-04fd-473c-a69a-039e4bb88cb4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\과제5 연산자 오버로딩">
+      <UniqueIdentifier>{af2535d3-d836-4c66-9fa8-f0dfb28e92a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HelloWorld.cpp">
@@ -78,12 +81,21 @@
     <ClCompile Include="MatrixApp.cpp">
       <Filter>소스 파일\과제4 클래스</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일\과제5 연산자 오버로딩</Filter>
+    </ClCompile>
+    <ClCompile Include="Money.cpp">
+      <Filter>소스 파일\과제5 연산자 오버로딩</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fraction.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Matrix.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Money.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
