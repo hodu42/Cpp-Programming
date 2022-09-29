@@ -3,14 +3,16 @@
 
 using namespace std;
 
-int main()		//main 제출? 잘 모르겠음 물어보자, -출력 처리필요
+int main()
 {
 	Matrix m1, m2;
 	m1.read(); m1.print();
 	m2.read(); m2.print();
+
 	Matrix m3 = m1.add(m2);
 	cout << "Matrix ADD" << endl;
 	m3.print();
+
 	m3 = m1.multi(m2);
 	cout << "Matrix Multiplication" << endl;
 	m3.print();

@@ -11,8 +11,10 @@ public:
 	int getCents() const;
 	void setDollars(int);
 	void setCents(int);
-	void inputNreturn();
+	Money inputNreturn();
 	string toString() const;
+	const Money operator +(const Money&) const;
+	const Money operator -(const Money&) const;
 	const bool operator ==(const Money&) const;
 	const bool operator !=(const Money&) const;
 	const bool operator >=(const Money&) const;
@@ -22,6 +24,5 @@ public:
 private:
 	int dollars;
 	int cents;
-	void setUnits();
-
+	void setDollarsAndCents(int, int);
 };

@@ -2,7 +2,8 @@
 
 class Fraction {
 public:
-	Fraction(int = 1, int = 1);
+	Fraction();
+	Fraction(int, int);
 	void setDenom(int);
 	void setNumer(int);
 	Fraction add(Fraction) const;
